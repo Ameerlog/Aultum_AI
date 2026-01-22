@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Dashboard from './components/dashboard.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1 className='flex text-center font-bold'>Aultum</h1>
-    </>
+    <div className="min-h-screen bg-gray-100">
+      <Dashboard />
+      <Footer />
+    </div>
   )
 }
 
