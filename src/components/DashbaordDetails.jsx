@@ -7,7 +7,7 @@ const DashboardDetails = () => {
 
   return (
     <section className="relative bg-blue-100/10 z-20 mt-3">
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-4 ">
       
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-zinc-900">Dashboard</h2>
