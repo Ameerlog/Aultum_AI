@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1 className='flex text-center font-bold'>Aultum</h1>
+      <h1>Aultum</h1>
     </>
   )
 }
