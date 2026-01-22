@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navbarData } from "../data/navbar";
 import { Bell, Menu, User, X } from "lucide-react";
-
+import logo from "../assets/aultumlogo.jpeg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-white relative z-50">
+    <nav className="w-full bg-gray-50 relative z-50">
       <div className="flex items-center justify-between py-3">
      
         <div className="pl-4 md:pl-8 lg:pl-16">
@@ -26,7 +26,7 @@ const Navbar = () => {
             href={navbarData.logo.url}
             className="text-2xl font-bold text-gray-800 hover:text-blue-900 transition-colors"
           >
-            {navbarData.logo.text}
+           <img src={logo} alt="AultumLogo" className="h-9 w-auto object-contain"/>
           </a>
         </div>
 
