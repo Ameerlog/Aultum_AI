@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { MapPin, CheckCircle, Funnel, MoreHorizontal, Workflow } from "lucide-react";
+import { MapPin, CheckCircle, Funnel, MoreHorizontal, Workflow, ArrowRight } from "lucide-react";
 import WorkflowImage from "../assets/workflow.png";
+import { useNavigate } from "react-router-dom";
 const locations = [
-  { id: 1, name: "Autum AI HQ", city: "Bangalore", skill: "Development", availability: "Available" },
-  { id: 2, name: "Autum AI North", city: "Delhi", skill: "Operations", availability: "Available" },
-  { id: 3, name: "Autum AI HQ", city: "Bangalore", skill: "Development", availability: "Available" },
-  { id: 4, name: "Autum AI North", city: "Delhi", skill: "Operations", availability: "Available" },
+  { id: 1, name: "John", city: "Bangalore", skill: "HR", availability: "Available" },
+  { id: 2, name: "Lerord", city: "Delhi", skill: "Operations", availability: "Available" },
+  { id: 3, name: "Leo", city: "Bangalore", skill: "Recruitment", availability: "Available" },
+  { id: 4, name: "Mike", city: "Delhi", skill: "Finance", availability: "Available" },
 ];
 
 export default function AutomationDashboard() {
   const [selected, setSelected] = useState([]);
-
+const navigate = useNavigate();
   const toggleRow = (id) => {
     setSelected((prev) =>
       prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
@@ -128,14 +129,41 @@ export default function AutomationDashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
           <div className="border border-gray-200 rounded-xl overflow-hidden h-137.5">
-            <div className="p-4">
-              <h3 className="text-lg font-semibold">
-                500+ Techies
-              </h3>
-              <p className="text-sm text-gray-500">
-                Interactive map across clusters in India
-              </p>
-            </div>
+           <div className="p-4 flex items-center justify-between">
+  <div>
+    <h3 className="text-lg font-semibold">
+      500+ Techies
+    </h3>
+    <p className="text-sm text-gray-500">
+      Interactive map across clusters in India
+    </p>
+  </div>
+
+ <button
+ onClick={()=> navigate("/register")}
+  className="
+    group
+    inline-flex items-center gap-2
+    rounded-full
+    border border-zinc-800
+    bg-zinc-900
+    px-4 py-2
+    text-sm font-semibold text-white
+    shadow-sm
+    transition-all duration-300
+    hover:bg-zinc-800
+    hover:border-zinc-600
+    hover:-translate-y-0.5
+    hover:shadow-md
+    active:translate-y-0
+  "
+>
+  Join the Network
+  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+</button>
+
+</div>
+
 
             <iframe
               title="India Map"
@@ -179,7 +207,7 @@ export default function AutomationDashboard() {
                       </th>
                       <th className="px-4 py-2 text-left">Name</th>
                       <th className="px-4 py-2 text-left">Location</th>
-                      <th className="px-4 py-2 text-left">Skills</th>
+                      <th className="px-4 py-2 text-left">Department</th>
                       <th className="px-4 py-2 text-left">Availability</th>
                     </tr>
                   </thead>

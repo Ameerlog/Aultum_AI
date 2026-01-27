@@ -30,18 +30,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="hidden md:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
-          {navbarData.links.map((link) => (
-            <a
-              key={link.id}
-              href={link.path}
-              className="relative text-gray-700 hover:text-blue-900 font-semibold group"
-            >
-              {link.label}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
-        </div>
+     
 
         <div className="flex items-center mr-4">
           <button className="p-2 ml-3 text-gray-700 hover:text-blue-600">
@@ -71,7 +60,7 @@ const Navbar = () => {
             exit="closed"
             className="md:hidden px-4"
           >
-            <div className="flex flex-col pt-6 space-y-4">
+            {/* <div className="flex flex-col pt-6 space-y-4">
               {navbarData.links.map((link) => (
                 <a
                   key={link.id}
@@ -82,7 +71,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-            </div>
+            </div> */}
           </motion.div>
         )}
       </AnimatePresence>
