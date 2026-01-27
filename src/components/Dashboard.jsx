@@ -149,7 +149,7 @@ export default function AutomationDashboard() {
             <div className="border border-gray-200 rounded-xl overflow-hidden h-50">
               <iframe
                 title="City Map"
-                src="https://www.google.com/maps?q=Bangalore&z=10&output=embed"
+                src="https://www.google.com/maps?q=Hubli&z=10&output=embed"
                 className="w-full h-full"
               />
             </div>
