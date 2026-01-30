@@ -86,7 +86,7 @@ import { ChevronDown, LayoutGrid } from "lucide-react";
 
 import technetwork from "../assets/technetwork.svg";
 import sales from "../assets/salesPerformance.svg";
-import graph from "../assets/Untitled.svg";
+import graph from "../assets/untitled.svg";
 import graph2 from "../assets/activepartners.svg";
 
 const dashboardCards = [
