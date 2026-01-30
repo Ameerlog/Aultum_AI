@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Register from "./components/Register";
 import ScrollToTop from "./components/ScrolltoTop";
 import About from "./pages/About";
+import UniqueProducts from "./components/UniqueProducts";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/register" element={<Register />} />
             <Route path="/aboutUs" element={<About/>}/>
+            <Route path="/unique" element={<UniqueProducts />} />
+        
           </Routes>
         </main>
 

@@ -2,17 +2,18 @@ import { Cloud, Layers, Rocket, Settings } from "lucide-react";
 
 export const cards = [
   {
-    title: "Find Tech Partners",
+    title: "Find the opportunities",
     desc: "Find out solutions and tech partners",
     icon: Rocket,
+      route: "/unique",
     theme: {
       bg: "bg-blue-100",
       iconColor: "text-blue-600",
     },
   },
   {
-    title: "White Label Solutions",
-    desc: "White label and resell solutions",
+    title: "Business and Management Solutions",
+    desc: "Business and  resell solutions",
     icon: Layers,
     theme: {
       bg: "bg-red-100",
@@ -29,8 +30,8 @@ export const cards = [
     },
   },
   {
-    title: "Deploy Tech",
-    desc: "Deploy 500+ technologies",
+    title: "Techies Network",
+    desc: "Find 500+ Technicians",
     icon: Cloud,
     theme: {
       bg: "bg-green-100",

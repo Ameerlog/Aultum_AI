@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MapPin, CheckCircle, Funnel, MoreHorizontal, Workflow, ArrowRight } from "lucide-react";
-import WorkflowImage from "../assets/workflow.png";
+import WorkflowImage from "../assets/automation.svg";
 import { useNavigate } from "react-router-dom";
 const locations = [
   { id: 1, name: "John", city: "Bangalore", skill: "HR", availability: "Available" },
@@ -37,14 +37,12 @@ const navigate = useNavigate();
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
         
-          <div className="bg-gray-50 rounded-xl p-4 flex gap-4 border border-gray-200">
+         <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 h-[420px] flex items-center justify-center overflow-hidden">
             <img
               src={WorkflowImage}
-              alt="Card Left"
-              className="w-[500px] h-[500px] rounded-lg object-center"
+              alt="Workflow"
+              className="w-full h-full object-contain scale-170"
             />
-
-           
           </div>
 
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm">
@@ -67,12 +65,38 @@ const navigate = useNavigate();
               <div>Conversions</div>
             </div>
 
-            <div className="divide-y">
+           <div className="divide-y">
               {[
-                { name: "Onboarding Sequence", tag: "Onboarding Sequence", leads: 202, conv: "33%" },
-                { name: "Lead Nurture", tag: "Onboarding Sequence", leads: 204, conv: "12%" },
-                { name: "Upsell Campaign", tag: "Upsell Campaign", leads: 37, conv: "9%" },
-                { name: "Upsell Campaign", tag: "Onboarding Sequence", leads: 580, conv: "15%" },
+                {
+                  channel: "Facebook Funnel",
+                  name: "Onboarding Sequence",
+                  leads: 202,
+                  conv: "33%",
+                },
+                {
+                  channel: "Instagram Funnel",
+                  name: "Lead Nurture",
+                  leads: 204,
+                  conv: "12%",
+                },
+                {
+                  channel: "WhatsApp Funnel",
+                  name: "Upsell Campaign",
+                  leads: 37,
+                  conv: "9%",
+                },
+                {
+                  channel: "Email Marketing Funnel",
+                  name: "Onboarding Sequence",
+                  leads: 580,
+                  conv: "15%",
+                },
+                {
+                  channel: "LinkedIn Funnel",
+                  name: "B2B Outreach",
+                  leads: 120,
+                  conv: "27%",
+                }
               ].map((item, i) => (
                 <div
                   key={i}
@@ -84,10 +108,10 @@ const navigate = useNavigate();
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">
-                        {item.name}
+                        {item.channel}
                       </p>
                       <p className="text-xs text-gray-500">
-                        {item.tag}
+                        {item.name}
                       </p>
                     </div>
                   </div>
@@ -103,7 +127,6 @@ const navigate = useNavigate();
                     </span>
                   </div>
 
-          
                   <div className="flex items-center justify-between">
                     <div className="font-medium text-gray-700">
                       {item.conv}
