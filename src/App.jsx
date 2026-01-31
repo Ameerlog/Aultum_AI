@@ -19,7 +19,8 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/register" element={<Register />} />
             <Route path="/aboutUs" element={<About/>}/>
-            <Route path="/unique" element={<UniqueProducts />} />
+           <Route path="/unique" element={<UniqueProducts />} />
+
         
           </Routes>
         </main>
