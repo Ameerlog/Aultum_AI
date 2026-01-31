@@ -28,6 +28,7 @@ const Navbar = () => {
           >
            <img src={logo} alt="AultumLogo" className="h-9 w-auto object-contain"/>
           </a>
+        
         </div>
 
      
@@ -60,7 +61,7 @@ const Navbar = () => {
             exit="closed"
             className="md:hidden px-4"
           >
-            {/* <div className="flex flex-col pt-6 space-y-4">
+            <div className="flex flex-col pt-6 space-y-4">
               {navbarData.links.map((link) => (
                 <a
                   key={link.id}
@@ -71,7 +72,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-            </div> */}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
