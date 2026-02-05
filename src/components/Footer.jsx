@@ -14,7 +14,7 @@ import {
   ChevronUp,
   X,
 } from "lucide-react";
-import Logo from "../assets/logo123.svg";
+import Logo from "../assets/aultumlogo1 (1).svg";
 
 
 const socialLinks = [
