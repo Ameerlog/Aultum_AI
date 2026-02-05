@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navbarData } from "../data/navbar";
 import { Bell, Menu, User, X } from "lucide-react";
-import logo from "../assets/aultumlogo1 (1).svg";
+import logo from "../assets/logoaultum.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,7 +26,7 @@ const Navbar = () => {
             href={navbarData.logo.url}
             className="text-2xl font-bold text-gray-800 hover:text-blue-900 transition-colors"
           >
-           <img src={logo} alt="AultumLogo" className="h-12 w-auto object-contain scale-400 ml-5"/>
+           <img src={logo} alt="AultumLogo" className="h-9 w-auto object-contain scale-300 ml-5"/>
           </a>
         </div>
 

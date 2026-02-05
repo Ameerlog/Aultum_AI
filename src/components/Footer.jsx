@@ -14,7 +14,7 @@ import {
   ChevronUp,
   X,
 } from "lucide-react";
-import Logo from "../assets/aultumlogo1 (1).svg";
+import Logo from "../assets/logoaultum.png";
 
 
 const socialLinks = [
@@ -104,7 +104,7 @@ export default function Footer() {
               <img
                 src={Logo}
                 alt="Aultum Logo"
-                className="h-10 w-auto object-contain mix-blend-multiply scale-500 ml-10"
+                className="h-10 w-auto object-contain mix-blend-multiply scale-300 ml-10"
               />
             </div>
             <p className="text-zinc-600 text-sm leading-relaxed mb-6 max-w-xs">
