@@ -26,7 +26,7 @@ const Navbar = () => {
             href={navbarData.logo.url}
             className="text-2xl font-bold text-gray-800 hover:text-blue-900 transition-colors"
           >
-           <img src={logo} alt="AultumLogo" className="h-9 w-auto object-contain scale-300 ml-5"/>
+           <img src={logo} alt="AultumLogo" className="h-9 w-auto object-contain scale-300 ml-7"/>
           </a>
         </div>
 
