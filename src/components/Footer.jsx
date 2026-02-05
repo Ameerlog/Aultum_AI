@@ -18,14 +18,19 @@ import Logo from "../assets/logoaultum.png";
 
 
 const socialLinks = [
-  { Icon: Facebook, href: "/", label: "Facebook" },
-  { Icon: X, href: "/", label: "Twitter" },
+  { Icon: Facebook,
+     href: "https://www.facebook.com/share/1FPqZrn48r/",
+    label: "Facebook" },
+
+  { Icon: X,
+     href: "https://x.com/aultum_com",
+     label: "Twitter" },
   {
     Icon: Instagram,
     href: "https://www.instagram.com/aultum.com307/",
     label: "Instagram",
   },
-  { Icon: Linkedin, href: "#", label: "LinkedIn" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/company/preunicorns/", label: "LinkedIn" },
   {
     Icon: Youtube,
     href: "https://www.youtube.com/@AultumInternational",
