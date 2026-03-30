@@ -95,8 +95,8 @@ export const products = [
     icon: Linkedin,
     isActive: false,
     theme: {
-      bg: "bg-pink-100",
-      iconColor: "text-pink-600",
+      bg: "bg-blue-100",
+      iconColor: "text-blue-600",
     },
   },
   {

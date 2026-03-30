@@ -18,8 +18,8 @@ const CardFeatures = () => {
               className="
                 flex items-center gap-4 rounded-xl bg-white px-6 py-4
                 shadow-sm ring-1 ring-zinc-200 cursor-pointer
-                transition-all duration-200 ease-in-out
-                hover:shadow-md hover:-translate-y-px
+                transition-all duration-300 ease-in-out
+                hover:shadow-2xl hover:shadow-purple-500/50 hover:-translate-y-2 hover:ring-2 hover:ring-purple-300
               "
             >
               <div

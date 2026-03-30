@@ -142,7 +142,7 @@ const DashboardDetails = () => {
           {dashboardCards.map((item) => (
             <div
               key={item.id}
-              className={`group overflow-hidden rounded-2xl bg-white ring-1 ring-zinc-200 shadow-sm hover:shadow-md transition ${
+              className={`group overflow-hidden rounded-2xl bg-white ring-1 ring-zinc-200 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 hover:-translate-y-2 hover:ring-2 hover:ring-purple-300 cursor-pointer ${
                 viewMode === "grid" ? "h-40" : "w-40"
               }`}
             >

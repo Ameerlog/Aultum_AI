@@ -11,8 +11,8 @@ const HeroWithCards = () => {
     <section className="relative w-full">
       <div className="absolute top-0 left-0 h-[360px] w-full bg-gradient-to-br from-pink-900 via-purple-300 to-blue-600 opacity-80 blur-[100px]" />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-24 text-center mt-20">
-        <h1 className="text-3xl font-bold text-zinc-900 sm:text-[28px] md:text-[36px] lg:text-[56px]">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-20 pt-12 text-center">
+        <h1 className="text-3xl font-bold text-zinc-900 sm:text-[28px] md:text-[36px] lg:text-[56px] leading-tight">
           Accelerate Your Business Growth
           <br />
           with Aultum Doorstep 

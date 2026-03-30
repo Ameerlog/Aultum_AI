@@ -50,8 +50,8 @@ const Navbar = () => {
             <Bell size={22} />
           </button>
 
-          <button className="pr-0 pl-5 py-2 hover:opacity-80 transition-opacity">
-            <img src={profileIcon} alt="Profile" className="h-6 w-6 object-cover" />
+          <button className="pr-0 pl-5 py-2 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg">
+            <img src={profileIcon} alt="Profile" className="h-6 w-6 object-cover transition-all duration-300" />
           </button>
 
           <button
