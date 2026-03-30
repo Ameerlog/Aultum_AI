@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navbarData } from "../data/navbar";
-import { Bell, Menu, User, X } from "lucide-react";
+import { Bell, Menu, X } from "lucide-react";
 import logo from "../assets/logoaultum.png";
+import profileIcon from "../assets/Cobrother_Profile.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -48,8 +50,8 @@ const Navbar = () => {
             <Bell size={22} />
           </button>
 
-          <button className="pr-0 pl-5  py-2 text-gray-700 hover:text-blue-600">
-            <User size={22} />
+          <button className="pr-0 pl-5 py-2 hover:opacity-80 transition-opacity">
+            <img src={profileIcon} alt="Profile" className="h-6 w-6 object-cover" />
           </button>
 
           <button

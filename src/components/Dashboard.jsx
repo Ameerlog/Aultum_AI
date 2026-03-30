@@ -3,10 +3,10 @@ import { MapPin, CheckCircle, Funnel, MoreHorizontal, Workflow, ArrowRight } fro
 import WorkflowImage from "../assets/automation.svg";
 import { useNavigate } from "react-router-dom";
 const locations = [
-  { id: 1, name: "John", city: "Bangalore", skill: "HR", availability: "Available" },
-  { id: 2, name: "Lerord", city: "Delhi", skill: "Operations", availability: "Available" },
-  { id: 3, name: "Leo", city: "Bangalore", skill: "Recruitment", availability: "Available" },
-  { id: 4, name: "Mike", city: "Delhi", skill: "Finance", availability: "Available" },
+  { id: 1, name: "Virat", city: "Bangalore", skill: "HR", availability: "Available" },
+  { id: 2, name: "Rohit", city: "Delhi", skill: "Operations", availability: "Available" },
+  { id: 3, name: "Rahul", city: "Bangalore", skill: "Recruitment", availability: "Available" },
+  { id: 4, name: "Arjun", city: "Delhi", skill: "Finance", availability: "Available" },
 ];
 
 export default function AutomationDashboard() {

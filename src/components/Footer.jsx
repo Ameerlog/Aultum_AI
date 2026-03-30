@@ -169,7 +169,7 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          <motion.div variants={itemVariants}>
+          {/* <motion.div variants={itemVariants}>
             <h4 className="text-sm font-bold text-zinc-900 mb-4 uppercase tracking-wider">
               Get in Touch
             </h4>
@@ -190,12 +190,12 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         <div className="border-t border-gray-200 py-6 flex items-center justify-center">
           <p className="text-center text-sm text-zinc-500">
-            © {new Date().getFullYear()}{" "}
+            &copy; {new Date().getFullYear()}{" "}
             <span className="font-semibold text-purple-600">Aultum</span>. All
             rights reserved.
           </p>

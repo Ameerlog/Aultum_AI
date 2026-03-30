@@ -187,41 +187,14 @@
 
 
 import React from "react";
-import {
-  MessageSquare,
-  Server,
-  Workflow,
-  FileText,
-  Smartphone,
-  Globe,
-  CreditCard,
-  BarChart3,
-  LifeBuoy ,
-  CirclePile
-} from "lucide-react";
 
 const ProductCard = ({ product, onToggle }) => {
   if (!product) return null;
 
-  const { id, title, description, isActive, theme } = product;
-
-  const iconMap = {
-    "Team Chat": MessageSquare,
-    "API Gateway": Server,
-    "Automation Hub": Workflow,
-    "Content Management": FileText,
-    "Mobile App": Smartphone,
-    "Web Application": Globe,
-    "Billing & Revenue Analytics": CreditCard,
-    "CRM Analytics": BarChart3,
-    "Project Management": LifeBuoy,
-    "Bulk Campaigns": CirclePile,
-  };
-
-  const Icon = iconMap[title];
+  const { id, title, description, isActive, theme, icon: Icon } = product;
 
   return (
-    <div className="rounded-2xl bg-white px-6 py-6 min-h-[220px] shadow-sm ring-1 ring-zinc-200 transition-all hover:shadow-md flex flex-col justify-between cursor-pointer">
+    <div className="rounded-2xl bg-white px-6 py-6 min-h-[220px] shadow-sm ring-1 ring-zinc-200 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/40 hover:-translate-y-2 hover:ring-2 hover:ring-purple-400/30 flex flex-col justify-between cursor-pointer">
       <div>
         <div
           className={`h-12 w-12 flex items-center justify-center rounded-xl ${theme.bg} mb-4`}
