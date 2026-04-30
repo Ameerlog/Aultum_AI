@@ -10,7 +10,8 @@ const FounderNote = () => {
           <div>
             <p className="text-sm text-zinc-500">30th April 2026</p>
             <h1 className="mt-2 max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-zinc-950 md:text-4xl">
-              A Note from Neminath: The Founding of CoBrother and Our Journey Toward Aultum
+              A Note from Founder, <br />
+              Neminath Akkole
             </h1>
             <p className="mt-8 max-w-5xl text-2xl leading-relaxed text-zinc-700">
               This letter marks the journey from industrial execution to digital institution-building, and our
