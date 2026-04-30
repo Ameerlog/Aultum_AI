@@ -6,7 +6,7 @@ const FounderNote = () => {
     <div className="bg-[#f4f4f5]">
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid gap-6 md:grid-cols-[96px_1fr] md:items-start">
-          <img src={founderPhoto} alt="Neminath" className="h-24 w-24 object-cover grayscale" />
+          <img src={founderPhoto} alt="Neminath" className="h-24 w-24 object-cover grayscale transition duration-500 hover:grayscale-0" />
           <div>
             <p className="text-sm text-zinc-500">30th April 2026</p>
             <h1 className="mt-2 max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-zinc-950 md:text-4xl">

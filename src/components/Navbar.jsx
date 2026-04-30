@@ -21,7 +21,7 @@ const Navbar = () => {
 
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="text-sm text-zinc-700 transition hover:text-zinc-950">
+            <a key={link.label} href={link.href} className="relative text-sm text-zinc-700 transition duration-300 hover:text-zinc-950 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full">
               {link.label}
             </a>
           ))}
@@ -45,7 +45,7 @@ const Navbar = () => {
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-sm text-zinc-700 transition hover:text-zinc-950"
+                className="relative text-sm text-zinc-700 transition duration-300 hover:text-zinc-950 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </a>

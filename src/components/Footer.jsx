@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logoAultum from "../assets/logoaultum.png";
 
 export default function Footer() {
@@ -12,29 +13,29 @@ export default function Footer() {
         <div>
           <h4 className="mb-4 text-sm font-semibold text-zinc-900">Our businesses</h4>
           <ul className="space-y-2 text-sm text-zinc-600">
-            <li>CoBrother</li>
-            <li>Aultum International</li>
-            <li>Gray Material</li>
-            <li>Mineral Intelligence</li>
+            <li><Link to="/cobrother" className="relative hover:text-zinc-900 transition duration-300 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full">CoBrother</Link></li>
+            {/* <li>Aultum International</li> */}
+            <li><Link to="/gray-material" className="relative hover:text-zinc-900 transition duration-300 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full">Gray Material</Link></li>
+            {/* <li>Mineral Intelligence</li> */}
           </ul>
         </div>
 
         <div>
           <h4 className="mb-4 text-sm font-semibold text-zinc-900">About</h4>
           <ul className="space-y-2 text-sm text-zinc-600">
-            <li>Culture</li>
-            <li>Careers</li>
-            <li>Investors</li>
-            <li>Impact</li>
-            <li>Brand resources</li>
+            <li><Link to="/culture" className="relative hover:text-zinc-900 transition duration-300 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full">Culture</Link></li>
+            <li><Link to="/careers" className="relative hover:text-zinc-900 transition duration-300 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full">Careers</Link></li>
+            <li><Link to="/investors" className="relative hover:text-zinc-900 transition duration-300 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full">Investors</Link></li>
+            <li><Link to="/impact" className="relative hover:text-zinc-900 transition duration-300 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full">Impact</Link></li>
+            {/* <li><Link to="/brand-resources" className="relative hover:text-zinc-900 transition duration-300 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full">Brand resources</Link></li> */}
           </ul>
         </div>
 
         <div>
           <h4 className="mb-4 text-sm font-semibold text-zinc-900">Get in touch</h4>
           <ul className="space-y-2 text-sm text-zinc-600">
-            <li>Contact</li>
-            <li>aultum.com@gmail.com</li>
+            <li><Link to="/contact" className="relative hover:text-zinc-900 transition duration-300 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full">Contact</Link></li>
+            {/* <li>aultum.com@gmail.com</li> */}
           </ul>
         </div>
       </div>

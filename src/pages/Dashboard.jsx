@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Compass, Goal, TrendingUp, BarChart3, Layers3 } from "lucide-react";
 import founderPhoto from "../assets/neminath-founder.png";
 import workflowImage from "../assets/workflow.png";
-import teamWorkingImage from "../assets/Team_Working.jpeg";
+import teamWorkingImage from "../assets/Team_Working.png";
 import performanceRandomThree from "../assets/performance-random-3.png";
 import coBrotherLogo from "../assets/Cobrother_Green.png";
 import battrifyLogo from "../assets/Logo.webp";
@@ -24,13 +24,13 @@ const businesses = [
       "The Physical Foundation: Gray Material delivers standardized quality in industrial aggregates, backed by Vertical Mineral Intelligence and initiatives like Lab-on-Wheels.",
     image: grayMaterialLogo,
   },
-  {
-    title: "Battrify",
-    subtitle: "Smart energy and digital ecosystem brand",
-    description:
-      "The Scalable Innovation Layer: Battrify connects reliable product execution with future-ready digital and energy ecosystems.",
-    image: battrifyLogo,
-  },
+  // {
+  //   title: "Battrify",
+  //   subtitle: "Smart energy and digital ecosystem brand",
+  //   description:
+  //     "The Scalable Innovation Layer: Battrify connects reliable product execution with future-ready digital and energy ecosystems.",
+  //   image: battrifyLogo,
+  // },
 ];
 
 const Dashboard = () => {
@@ -45,17 +45,15 @@ const Dashboard = () => {
             backgroundSize: "52px 52px",
           }}
         />
-        <h1 className="relative max-w-5xl text-4xl font-medium leading-tight tracking-tight text-zinc-950 md:text-6xl">
-          Aultum isn&apos;t just a name.
-          <br />
-          It&apos;s a commitment to the ultimate.
+        <h1 className="relative max-w-5xl text-2xl font-medium leading-tight tracking-tight text-zinc-950 md:text-5xl">
+          Aultum is just deploying an elite ecosystem and ultimate technologies to hammer out the world&apos;s most ultimate brands.
         </h1>
 
         <div className="relative mt-10 grid max-w-2xl grid-cols-[96px_1fr] gap-4 border border-zinc-200 bg-[#f8f8f8] p-4 sm:ml-auto">
-          <img src={founderPhoto} alt="Founder Neminath" className="h-24 w-24 object-cover grayscale" />
+          <img src={founderPhoto} alt="Akkole" className="h-24 w-24 object-cover grayscale transition duration-500 hover:grayscale-0" />
           <div>
-            <p className="bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 bg-clip-text text-lg font-bold text-transparent">
-              A note from our Founder, Neminath Akkole
+            <p className="text-lg font-bold text-purple-700">
+              A note from our Founder, Neminath
             </p>
             <Link to="/founder-note" className="mt-2 inline-block border-b border-zinc-800 text-sm text-zinc-900">
               Read more
@@ -86,9 +84,12 @@ const Dashboard = () => {
               </div>
               <h3 className="mt-6 text-3xl font-medium text-zinc-950 md:text-4xl">{business.subtitle}</h3>
               <p className="mt-4 text-lg leading-relaxed text-zinc-700 md:text-xl">{business.description}</p>
-              <a href="#contact" className="mt-5 inline-block border-b border-zinc-900 text-lg text-zinc-900 md:text-xl">
+              <Link 
+                to={business.title === "CoBrother" ? "/cobrother" : business.title === "Gray Material" ? "/gray-material" : "#contact"}
+                className="mt-5 inline-block border-b border-zinc-900 text-lg text-zinc-900 md:text-xl"
+              >
                 Learn more
-              </a>
+              </Link>
             </article>
           ))}
         </div>
@@ -171,9 +172,9 @@ const Dashboard = () => {
               This place is designed to make you feel uncomfortable, so you can
               keep growing, thinking bigger, and executing with discipline.
             </p>
-            <button className="mt-8 bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800">
+            <Link to="/culture" className="mt-8 inline-block bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800">
               Learn more about our culture
-            </button>
+            </Link>
           </div>
         </div>
       </section>
