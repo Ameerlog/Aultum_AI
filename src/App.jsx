@@ -6,6 +6,7 @@ import Register from "./components/Register";
 import ScrollToTop from "./components/ScrolltoTop";
 import About from "./pages/About";
 import UniqueProducts from "./components/UniqueProducts";
+import FounderNote from "./pages/FounderNote";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/aboutUs" element={<About/>}/>
            <Route path="/unique" element={<UniqueProducts />} />
+           <Route path="/founder-note" element={<FounderNote />} />
 
         
           </Routes>

@@ -1,93 +1,58 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { navbarData } from "../data/navbar";
-import { Bell, Menu, X } from "lucide-react";
-import logo from "../assets/logoaultum.png";
-import profileIcon from "../assets/Cobrother_Profile.png";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import logoAultum from "../assets/logoaultum.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const menuVariants = {
-    closed: {
-      opacity: 0,
-      y: -10,
-    },
-    open: {
-      opacity: 1,
-      y: 0,
-    },
-  };
+  const navLinks = [
+    { label: "Home", href: "#top" },
+    { label: "Businesses", href: "#businesses" },
+    { label: "Performance", href: "#performance" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
-    <nav className="w-full bg-gray-50 relative z-50">
-      <div className="flex items-center justify-between py-3">
-     
-        <div className="pl-4 md:pl-8 lg:pl-16">
-          <a
-            href={navbarData.logo.url}
-            className="text-2xl font-bold text-gray-800 hover:text-blue-900 transition-colors"
-          >
-           <img src={logo} alt="AultumLogo" className="h-9 w-auto object-contain scale-300 ml-7"/>
-          </a>
-        </div>
+    <nav className="sticky top-0 z-50 border-b border-zinc-200 bg-[#f4f4f5]/95 backdrop-blur">
+      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 lg:px-10">
+        <Link to="/" className="inline-flex items-center">
+          <img src={logoAultum} alt="Aultum" className="h-[41px] w-auto object-contain" />
+        </Link>
 
-        <div className="hidden md:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
-          {navbarData.links.map((link) => (
-            <a
-              key={link.id}
-              href={link.path}
-              className="relative text-gray-700 hover:text-blue-900 font-semibold group"
-            >
+        <div className="hidden items-center gap-8 md:flex">
+          {navLinks.map((link) => (
+            <a key={link.label} href={link.href} className="text-sm text-zinc-700 transition hover:text-zinc-950">
               {link.label}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </div>
 
-        <div className="flex items-center mr-4">
-          <button className="p-2 ml-3 text-gray-700 hover:text-blue-600">
-            <Bell size={22} />
-          </button>
-
-          <button className="pr-0 pl-5 py-2 transition-all duration-300 hover:scale-110 hover:drop-shadow-lg">
-            <img src={profileIcon} alt="Profile" className="h-6 w-6 object-cover transition-all duration-300" />
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setIsOpen((prev) => !prev)}
-            className="md:hidden pr-0 pl-2 py-2 text-gray-700 hover:text-blue-600 cursor-pointer"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="text-zinc-700 md:hidden"
+          aria-label="Toggle navigation"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            variants={menuVariants}
-            initial="closed"
-            animate="open"
-            exit="closed"
-            className="md:hidden px-4"
-          >
-            <div className="flex flex-col pt-6 space-y-4">
-              {navbarData.links.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 text-gray-700 font-medium rounded-lg hover:bg-gray-100"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isOpen && (
+        <div className="border-t border-zinc-200 bg-[#f4f4f5] px-6 pb-5 pt-3 md:hidden">
+          <div className="flex flex-col gap-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-sm text-zinc-700 transition hover:text-zinc-950"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
