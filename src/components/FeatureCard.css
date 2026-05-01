@@ -1,0 +1,129 @@
+.feature-card {
+  width: 354px;
+  min-height: 480px;
+  padding: 40px 34px 42px;
+  border-radius: 18px;
+  border: 1.5px solid #84dfe0;
+  background: #ffffff;
+  box-shadow:
+    0 18px 42px rgba(85, 192, 193, 0.2),
+    0 0 44px rgba(125, 235, 223, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  flex-shrink: 0;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: #5fd7d9;
+  box-shadow:
+    0 28px 58px rgba(70, 180, 185, 0.35),
+    0 0 58px rgba(115, 235, 225, 0.45);
+}
+
+.feature-image-container {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  background: #111111;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+.feature-card:hover .feature-image-container {
+  transform: scale(1.02);
+}
+
+.feature-title {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #151827;
+  font-family: 'Poppins', sans-serif;
+}
+
+.feature-description {
+  max-width: 280px;
+  margin: 0 0 30px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #667085;
+  flex-grow: 1;
+}
+
+.feature-button {
+  margin-top: auto;
+  height: 52px;
+  padding: 0 8px 0 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.feature-button-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  color: #111827;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.default-arrow, .hover-arrow {
+  position: absolute;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-arrow {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+/* Hover State */
+.group:hover .feature-button {
+  background: linear-gradient(90deg, #e0fcf4 0%, #e0f5ff 100%);
+  border-color: transparent;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.group:hover .feature-button-icon {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  transform: scale(1.05);
+}
+
+.group:hover .default-arrow {
+  transform: translate(30px, -30px);
+  opacity: 0;
+}
+
+.group:hover .hover-arrow {
+  transform: translateX(0);
+  opacity: 1;
+}

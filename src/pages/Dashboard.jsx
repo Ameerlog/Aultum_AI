@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Compass, Goal, TrendingUp, BarChart3, Layers3 } from "lucide-react";
+import { Compass, Goal, TrendingUp, BarChart3, Layers3, ArrowUpRight, ArrowRight } from "lucide-react";
+import "./../components/FeatureCard.css";
 import founderPhoto from "../assets/neminath-founder.png";
 import workflowImage from "../assets/workflow.png";
 import teamWorkingImage from "../assets/Team_Working.png";
@@ -16,13 +17,15 @@ const businesses = [
     description:
       "The Digital Bridge: CoBrother empowers grassroots South Asian entrepreneurs with domains, branding, automation, and practical business acceleration.",
     image: coBrotherLogo,
+    link: "https://co-brother-frontend-lts-2.vercel.app/",
   },
   {
     title: "Gray Material",
-    subtitle: "The physical foundation at industrial scale",
+    subtitle: "Gray Material",
     description:
       "The Physical Foundation: Gray Material delivers standardized quality in industrial aggregates, backed by Vertical Mineral Intelligence and initiatives like Lab-on-Wheels.",
     image: grayMaterialLogo,
+    link: "https://www.graymaterial.com/",
   },
   // {
   //   title: "Battrify",
@@ -72,25 +75,45 @@ const Dashboard = () => {
           traditional world of Gray Material.
         </p>
 
-        <div className="mt-10 flex gap-8 overflow-x-auto pb-2">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {businesses.map((business) => (
-            <article key={business.title} className="group min-w-[330px] flex-1 md:min-w-[360px]">
-              <div className="flex h-72 items-center justify-center border border-zinc-200 bg-zinc-800 p-8">
+            <div 
+              key={business.title} 
+              className="
+                group bg-white rounded-2xl p-8 text-center
+                border border-zinc-200
+                transition-all duration-300 ease-in-out
+                hover:shadow-[0_0_35px_rgba(56,189,248,0.35)]
+                hover:border-blue-300
+                hover:-translate-y-2
+                flex flex-col items-center
+              "
+            >
+              <div className="mb-6 h-20 flex items-center justify-center">
                 <img
                   src={business.image}
                   alt={`${business.title} brand logo`}
-                  className="max-h-28 w-auto [filter:grayscale(100%)] transition duration-500 group-hover:[filter:grayscale(0%)]"
+                  className="max-h-16 w-auto grayscale group-hover:grayscale-0 transition duration-300"
                 />
               </div>
-              <h3 className="mt-6 text-3xl font-medium text-zinc-950 md:text-4xl">{business.subtitle}</h3>
-              <p className="mt-4 text-lg leading-relaxed text-zinc-700 md:text-xl">{business.description}</p>
-              <Link 
-                to={business.title === "CoBrother" ? "/cobrother" : business.title === "Gray Material" ? "/gray-material" : "#contact"}
-                className="mt-5 inline-block border-b border-zinc-900 text-lg text-zinc-900 md:text-xl"
+
+              <p className="text-zinc-600 text-sm mb-8 flex-grow">
+                {business.description}
+              </p>
+
+              <a 
+                href={business.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="feature-button"
               >
-                Learn more
-              </Link>
-            </article>
+                <span>Explore</span>
+                <span className="feature-button-icon">
+                  <ArrowUpRight size={20} className="default-arrow" />
+                  <ArrowRight size={20} className="hover-arrow" />
+                </span>
+              </a>
+            </div>
           ))}
         </div>
       </section>
