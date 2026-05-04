@@ -17,7 +17,7 @@ const businesses = [
     description:
       "The Digital Bridge: CoBrother empowers grassroots South Asian entrepreneurs with domains, branding, automation, and practical business acceleration.",
     image: coBrotherLogo,
-    link: "https://co-brother-frontend-lts-2.vercel.app/",
+    link: "https://cobrother.com/",
   },
   {
     title: "Gray Material",
